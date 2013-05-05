@@ -1,0 +1,30 @@
+﻿<Window x:Class="ImageProcess.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NTUT Image Process Howmework" Height="525" Width="736" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox Header="Input" Height="274" HorizontalAlignment="Left" Margin="12,12,0,0" Name="groupBox1" VerticalAlignment="Top" Width="344">
+            <Grid>
+                <Image Height="240" HorizontalAlignment="Left" Margin="6,6,0,0" Name="inputImage" Stretch="Uniform" VerticalAlignment="Top" Width="320" MouseUp="inputImage_MouseUp" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Output" Height="274" HorizontalAlignment="Left" Margin="362,12,0,0" Name="groupBox2" VerticalAlignment="Top" Width="344">
+            <Grid>
+                <Image Height="240" HorizontalAlignment="Left" Margin="6,6,0,0" Name="outputImage" Stretch="Uniform" VerticalAlignment="Top" Width="320" MouseDown="outputImage_MouseDown" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Image Process" Height="123" HorizontalAlignment="Left" Margin="12,324,0,0" Name="processBox" VerticalAlignment="Top" Width="694" IsEnabled="False">
+            <Grid>
+                <Button Content="Gray" Height="88" HorizontalAlignment="Left" Margin="6,6,0,0" Name="grayBtn" VerticalAlignment="Top" Width="100" Click="grayBtn_Click" />
+                <Button Content="Mosaic" Height="62" HorizontalAlignment="Left" Margin="218,6,0,0" Name="mosaicBtn" VerticalAlignment="Top" Width="100" Click="mosaicBtn_Click" />
+                <Button Content="Mirror" Height="88" HorizontalAlignment="Left" Margin="112,6,0,0" Name="mirrorBtn" VerticalAlignment="Top" Width="100" Click="mirrorBtn_Click" />
+                <Slider Height="23" HorizontalAlignment="Left" Margin="218,71,0,0" Name="mosaicBlock" VerticalAlignment="Top" Width="100" Maximum="256" ValueChanged="mosaicBlock_ValueChanged" Minimum="1" />
+                <Button Content="Rotate" Height="62" HorizontalAlignment="Left" Margin="350,6,0,0" Name="rotateBtn" VerticalAlignment="Top" Width="99" Click="rotateBtn_Click" />
+                <Slider Height="23" HorizontalAlignment="Left" Margin="350,71,0,0" Name="rotateDegree" VerticalAlignment="Top" Width="99" Minimum="-180" Maximum="180" Value="0" ValueChanged="rotateDegree_ValueChanged" />
+            </Grid>
+        </GroupBox>
+        <Button Content="Load" Height="23" HorizontalAlignment="Left" Margin="281,292,0,0" Name="openBtn" VerticalAlignment="Top" Width="75" Click="openBtn_Click" />
+        <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="631,292,0,0" Name="saveBtn" VerticalAlignment="Top" Width="75" Click="saveBtn_Click" />
+        <Button Content="Exit" Height="23" HorizontalAlignment="Left" Margin="631,453,0,0" Name="exitBtn" VerticalAlignment="Top" Width="75" Click="exitBtn_Click" />
+    </Grid>
+</Window>
